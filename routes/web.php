@@ -1,5 +1,10 @@
 <?php
 
+use App\Topic;
+use App\User;
+use App\Post;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +17,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+      return view('welcome');
+    
 });
 
 // Route::get('/topics','TopicsController@index');
@@ -22,3 +29,11 @@ Route::get('/', function () {
 
 Route::resource('topics','TopicsController');
 Route::resource('topics.posts','PostsController');
+
+Auth::routes();
+
+Route::get('profile', 'UserController@profile');
+Route::post('profile', 'UserController@update_avatar');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('ajaxRequest', 'PostsController@ajaxRequest')->name('ajaxRequest');
+

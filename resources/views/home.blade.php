@@ -1,5 +1,3 @@
-
-
 @extends('layouts.app')
 
 @section('content')
@@ -7,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header d-flex"><h3>Goodness Chat</h3> <span class="ml-auto "><a class="btn btn-primary btn-xs" href="topics/create">New</a></span></div>
+                <div class="card-header d-flex"><h3>My Posts</h3> <span class="ml-auto "><a class="btn btn-primary btn-xs" href="topics/create">New</a></span></div>
 
                 <div class="card-body">
                     @if (count($topics) != 0)
@@ -18,9 +16,8 @@
                                 <a href="topics/{{$topic->id}}">
                                   <h5>{{$topic->title}}</h5>
                               </a>
-                              <?php  $user = App\User::where('id', $topic['posted_by'])->firstOrFail(); ?>
-                               <i>Posted by <b>{{ $user->name }}</b></i>
                                <p>{{ $topic->created_at->diffForHumans()}}</p>
+
                           </div>
                           <div class="col-4 d-flex justify-content-end">
 
@@ -50,3 +47,4 @@
     </div>
 </div>
 @endsection
+

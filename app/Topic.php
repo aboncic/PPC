@@ -8,7 +8,7 @@ class Topic extends Model
 {
     
     protected $fillable = [
-        'title'
+        'title', 'posted_by'
     ];
 
     public function posts()
