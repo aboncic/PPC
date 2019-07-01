@@ -65,7 +65,7 @@
                             @endif
                         @else
                             <li class="nav-item avatar">
-                                <img src="{{ URL::to('/') }}/storage/{{ Auth::user()->avatar }}" class="rounded-circle z-depth-0" alt="avatar" height="35">
+                                <img src="{{ URL::to('/') }}/avatars/{{ Auth::user()->avatar }}" class="rounded-circle z-depth-0" alt="avatar" height="35">
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
