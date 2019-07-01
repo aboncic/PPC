@@ -55,16 +55,7 @@ return [
   'visibility' => 'public',
 ],
 
-if ($request->hasFile('image')) {
-  $image = $request->file('image');
-  $filename = 'page' . '-' . time() . '.' . $image->getClientOriginalExtension();
-  $location = public_path('app/public_html/images/' . $filename);
-  Image::make($image)->resize(1200, 600)->save($location);
-  if(!empty($page->image)){
-    Storage::delete('images/' . $page->image);
-  }
-  $page->image = $filename;            
-}
+
 
         's3' => [
             'driver' => 's3',
