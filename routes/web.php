@@ -37,7 +37,7 @@ Route::post('profile', 'UserController@update_avatar');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('ajaxRequest', 'PostsController@ajaxRequest')->name('ajaxRequest');
 
-Route::get('storage/avatars/{filename}', function ($filename)
+Route::get('storage/{filename}', function ($filename)
 {
     $path = storage_path('public/' . $filename);
     if (!File::exists($path)) {
