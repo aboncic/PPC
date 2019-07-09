@@ -66,8 +66,6 @@
                         @else
                             <li class="nav-item avatar">
                                 <img src="/storage/avatars/{{ Auth::user()->avatar }}" class="rounded-circle z-depth-0" alt="avatar" height="35"/>
-                                <img src="{{route('avatar',Auth::user()->avatar)}}" class="rounded-circle z-depth-0" alt="avatar" height="35"/>
-                                <img src="/avatars/{{ Auth::user()->avatar }}" />
 
 
                             </li>
