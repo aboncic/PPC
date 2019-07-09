@@ -65,7 +65,7 @@
                             @endif
                         @else
                             <li class="nav-item avatar">
-                                <img src="/storage/{{ Auth::user()->avatar }}" class="rounded-circle z-depth-0" alt="avatar" height="35"/>
+                                <img src="/storage/avatars/{{ Auth::user()->avatar }}" class="rounded-circle z-depth-0" alt="avatar" height="35"/>
 
 
                             </li>
